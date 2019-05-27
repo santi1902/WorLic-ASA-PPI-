@@ -1,0 +1,66 @@
+.hola {
+    background-color: aquamarine;
+}
+
+body {
+    background: url(../img/fondo_login.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.main-section {
+    margin: 0 auto;
+    margin-top: 45%;
+    padding: 2px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 0 20px;
+    box-shadow: 0px 0px 3px #ffffff;
+}
+
+.user-img {
+    margin-top: -40px;
+    margin-bottom: 35px;
+}
+
+.user-img img {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 3px #ffffff;
+    border-radius: 50%;
+}
+
+.form-group input {
+    height: 52px;
+    font-size: 22px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.form-group::before {
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding-top: 4px;
+}
+
+.form-group#user-group::before {
+    content: "";
+}
+
+.form-group#contrasena-group::before {
+    content: "";
+}
+
+button {
+    width: 60%;
+    margin: 5px 0 25px;
+}
