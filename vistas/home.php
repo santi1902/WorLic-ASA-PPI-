@@ -114,7 +114,7 @@
                                                 <td>Argelio Ramirez</td>
                                                 <td>Abierto</td>
                                                 <td>2 meses</td>
-                                                <td><button class="btn btn-info">Ver</button></td>
+                                                <td><a href="./vistas/info.php"><button class="btn btn-info">Ver</button></a></td>
 
                                             </tr>
                                             <tr>
@@ -123,7 +123,7 @@
                                                 <td>Santiago</td>
                                                 <td>Cerrado</td>
                                                 <td>3 meses</td>
-                                                <td><button class="btn btn-info">Ver</button></td>
+                                                <td><a href="./vistas/info.php"><button class="btn btn-info">Ver</button></a></td>
                                             </tr>
                                         </table>
                                     </div>

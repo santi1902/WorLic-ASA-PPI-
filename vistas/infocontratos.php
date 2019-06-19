@@ -92,47 +92,51 @@
 
                                         <h4 class="text-center">Arconsa Deploide</h4>
                                         <div class="row col-md-3">
-                                            <img src="../img\obra.png" alt="" width="200px" height="200px">
+                                            <img src="../img\contrato.png" alt="">
                                         </div>
                                         <form>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Nombre</label>
-                                                    <input type="text" readonly="true" value="Arconsa Deploide" class="form-control" id="Nombre"  required>
+                                                    <input type="text" readonly="true" value="Obras Metro" class="form-control" id="nombre" required>
                                                 </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Codigo</label>
+                                                    <input type="text" readonly="true" value="C-903C-89" class="form-control" id="codigo" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Representante Legal</label>
+                                                    <input type="text" readonly="true" value="Santiago Valencia Guzmán" class="form-control" id="representante" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputState" aria-required="">Obra</label>
+                                                    <input type="text" readonly="true" value="Politecnico Jaime isaza" class="form-control" id="representante" required>
 
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Inversion Definida</label>
-                                                    <input type="text" readonly="true" value="$2'300.000" class="form-control" id="inversion" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Comportamiento</label>
-                                                    <input type="text" readonly="true" value="Sucursal" class="form-control" id="comportamiento"  required>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Descripción </label>
-                                                    <input type="text" readonly="true" value="Se lleva a cabo el proceso de gestion de area" class="form-control" id="Descipcion"  required>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Fecha inicio </label>
-                                                    <input type="text" readonly="true" value="27-04-2019" class="form-control" id="inicio" required>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Fecha final esperada </label>
-                                                    <input type="text" readonly="true" value="27-10-2019" class="form-control" id="terminado"  required>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Fecha Terminado </label>
-                                                    <input type="text" readonly="true" value="27-10-2019" class="form-control" id="terminado"  required>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Duración </label>
-                                                    <input type="text" readonly="true" value="4 meses" class="form-control" id="Descipcion"  required>
-                                                </div>
+                                                    <label for="inputState">Contratistas</label>
+                                                    <input type="text" readonly="true" value="Angie Carolina Orlas" class="form-control" id="representante" required>
 
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Valor del Contrato</label>
+                                                    <input type="text" readonly="true" value="$23'323'999" class="form-control" id="valor"  required>
+                                                </div>
 
                                             </div>
 
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputCity">Fecha de Inicio</label>
+                                                    <input type="text" readonly="true" value="2018-02-20" class="form-control" id="inputCity" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputZip">Fecha de Terminado</label>
+                                                    <input type="text" readonly="true" value="2019-02-20" class="form-control" id="inputZip" required>
+                                                </div>
+                                            </div>
+
+                                            
                                         </form>
 
                                         <br>

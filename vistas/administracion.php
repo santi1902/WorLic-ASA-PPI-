@@ -115,21 +115,21 @@
                                                 <td>Valencia Guzmán</td>
                                                 <td>1000395174</td>
                                                 <td>santiago.valencia@arus.com.co</td>
-                                                <td><button class="btn btn-danger"><span class="icon-edit"></span>Actualizar</button></td>
+                                                <td><button class="btn btn-outline-primary"><span class="icon-edit"></span>Actualizar</button></td>
                                             </tr>
                                             <tr>
                                                 <td>Angie Carolina</td>
                                                 <td>Orlas Madrid</td>
                                                 <td>1007239625</td>
                                                 <td>angie.carolina@softcaribbean</td>
-                                                <td><button class="btn btn-danger"><span class="icon-edit"></span> Actualizar</button></td>
+                                                <td><button class="btn btn-outline-primary"><span class="icon-edit"></span> Actualizar</button></td>
                                             </tr>
                                             <tr>
                                                 <td>Alejandra</td>
                                                 <td>Montoya</td>
                                                 <td>23942034</td>
                                                 <td>alejandra.montoya@echez.com.co</td>
-                                                <td><button class="btn btn-danger"><span class="icon-edit"></span>Actualizar</button></td>
+                                                <td><button class="btn btn-outline-primary"><span class="icon-edit"></span>Actualizar</button></td>
                                             </tr>
                                         </table>
                                     </div>

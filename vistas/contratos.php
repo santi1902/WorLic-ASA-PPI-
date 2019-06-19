@@ -104,7 +104,7 @@
                                                 <td>38483-CDS</td>
                                                 <td>Argelio Ramirez</td>
                                                 <td>Politecnico Jaime isaza</td>
-                                                <td><button class="btn btn-info">Ver</button></td>
+                                                <td><a href="./infocontratos.php"><button class="btn btn-info">Ver</button></a></td>
 
                                             </tr>
                                             <tr>
@@ -112,7 +112,7 @@
                                                 <td>VD-3454-DE</td>
                                                 <td>Santiago valencia</td>
                                                 <td>Arus S.A</td>
-                                                <td><button class="btn btn-info">Ver</button></td>
+                                                <td><a href="./infocontratos.php"><button class="btn btn-info">Ver</button></a></td>
                                             </tr>
                                         </table>
                                     </div>
