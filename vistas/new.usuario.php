@@ -82,50 +82,52 @@
                                     <div class="container">
                                         
                                         <br>
-                                        <form>
+                                        <form action="../metodos_funciones/new_operario.php" method="post">
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Primer Nombre</label>
-                                                    <input type="text" class="form-control" id="Nombre" placeholder="Ingresa primer nombre " required>
+                                                    <input type="text" class="form-control" name="nombre" placeholder="Ingresa primer nombre " required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Segundo Nombre</label>
-                                                    <input type="text" class="form-control" id="codigo" placeholder="Ingresa segundo nombre" required>
+                                                    <input type="text" class="form-control" name="segundo_nombre" placeholder="Ingresa segundo nombre" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Primer Apellido</label>
-                                                    <input type="text" class="form-control" id="codigo" placeholder="Ingresa primer apellido" required>
+                                                    <input type="text" class="form-control" name="apellido" placeholder="Ingresa primer apellido" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Segundo Apellido</label>
-                                                    <input type="text" class="form-control" id="codigo" placeholder="Ingresa segundo apellido" required>
+                                                    <input type="text" class="form-control" name="segundo_apellido" placeholder="Ingresa segundo apellido" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Cedula</label>
-                                                    <input type="number" class="form-control" id="codigo" placeholder="Ingresa la cedula" required>
+                                                    <input type="number" class="form-control" name="cedula" placeholder="Ingresa la cedula" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Direcion</label>
-                                                    <input type="tel" class="form-control" id="codigo" placeholder="Ingresa direccion" required>
+                                                    <label for="inputEmail4">Dirección</label>
+                                                    <input type="tel" class="form-control" name="direccion" placeholder="Ingresa direccion" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Celular</label>
-                                                    <input type="tel" class="form-control" id="codigo" placeholder="Ingresa tu numero de celular" required>
+                                                    <input type="tel" class="form-control" name="celular" placeholder="Ingresa tu numero de celular" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Email</label>
-                                                    <input type="email" class="form-control" id="codigo" placeholder="Ingresa email" required>
+                                                    <input type="email" class="form-control" name="email" placeholder="Ingresa email" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Clave</label>
-                                                    <input type="password" class="form-control" id="codigo" placeholder="Ingresa Contrasena" required>
+                                                    <input type="password" class="form-control" name="password" placeholder="Ingresa Contrasena" required>
                                                 </div>
 
                                             </div>
 
 
-                                            <button type="submit" class="btn btn-primary">Crear</button>
+                                            <button type="submit" class="btn btn-primary" name="submit">Crear</button>
                                         </form>
+                                       
+
                                     </div>
                                 </div>
                             </div>

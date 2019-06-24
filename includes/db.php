@@ -7,7 +7,7 @@ class DB{
     private $charset;
     public function __construct(){
         $this->host     = 'localhost';
-        $this->db       = 'worlic_asa';
+        $this->db       = 'worlic_asa_produccion';
         $this->user     = 'root';
         $this->password = "1238904567Sa*";
         $this->charset  = 'utf8mb4';
@@ -29,3 +29,4 @@ class DB{
         }   
     }
 }
+?>

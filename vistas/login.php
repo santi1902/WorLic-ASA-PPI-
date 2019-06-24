@@ -31,7 +31,7 @@
                     
                     <span class="icon-user">Usuario</span>
                     <div class="form-group" id="user-group">
-                        <input type="text text-center" name="username" class="form-control" placeholder="Escribe tu usuario"  required />
+                        <input type="text text-center" name="email" class="form-control" placeholder="Escribe tu usuario"  required />
                     </div>                    
                     <span class="icon-lock-closed">Contraseña</span>
                     <div class="form-group" id="contrasena-group">

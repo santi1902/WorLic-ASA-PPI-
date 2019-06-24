@@ -1,13 +1,11 @@
 <?php
-
 include 'db.php';
-
 class User extends DB{
     private $nombre;
     private $username;
     public function userExists($user, $pass){
         $pass = $pass;
-        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE username = :user AND password = :pass');
+        $query = $this->connect()->prepare('SELECT * FROM usuario WHERE username = :user AND password = :pass');
         $query->execute(['user' => $user, 'pass' => $pass]);
         if($query->rowCount()){
             return true;
@@ -16,7 +14,7 @@ class User extends DB{
         }
     }
     public function setUser($user){
-        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE username = :user');
+        $query = $this->connect()->prepare('SELECT * FROM usuario WHERE username = :user');
         $query->execute(['user' => $user]);
         
         foreach ($query as $currentUser) {

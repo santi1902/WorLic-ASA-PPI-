@@ -7,9 +7,9 @@ if(isset($_SESSION['user'])){
     //echo "hay sesion";
     $user->setUser($userSession->getCurrentUser());
     include 'vistas/home.php';
-}else if(isset($_POST['username']) && isset($_POST['password'])){
+}else if(isset($_POST['email']) && isset($_POST['password'])){
     
-    $userForm = $_POST['username'];
+    $userForm = $_POST['email'];
     $passForm = $_POST['password'];
     $user = new User();
     if($user->userExists($userForm, $passForm)){
