@@ -80,49 +80,45 @@
                                 <div class="container">
             
             <br>
-            <form>
+            <form action="../metodos_funciones/new_obra.php" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Nombre</label>
-                        <input type="text" class="form-control" id="Nombre" placeholder="Nombre " required>
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre " required>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Inversion Definida</label>
-                        <input type="number" class="form-control" id="inversion" placeholder="Inversion Definida" required>
+                        <input type="number" class="form-control" name="inversion" placeholder="Inversion Definida" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Comportamiento</label>
-                        <input type="text" class="form-control" id="comportamiento" placeholder="Comportamiento" required>
+                        <input type="text" class="form-control" name="comportamiento" placeholder="Comportamiento" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Descripción </label>
-                        <input type="text" class="form-control" id="Descipcion" placeholder="descipcion" required>
+                        <input type="text" class="form-control" name="descripcion" placeholder="descipcion" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Fecha inicio </label>
-                        <input type="date" class="form-control" id="inicio" placeholder="Fecha de inicio de la obra" required>
+                        <input type="date" class="form-control" name="inicio" placeholder="Fecha de inicio de la obra" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Fecha final esperada </label>
-                        <input type="date" class="form-control" id="terminado" placeholder="Fecha esperada de finalización" required>
+                        <input type="date" class="form-control" name="fecha_esperada" placeholder="Fecha esperada de finalización" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Fecha Terminado </label>
-                        <input type="date" class="form-control" id="terminado" placeholder="Fecha de terminación de la obra" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Descipción </label>
-                        <input type="text" class="form-control" id="Descipcion" placeholder="descipcion" required>
+                        <input type="date" class="form-control" name="terminada" placeholder="Fecha de terminación de la obra" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Duración </label>
-                        <input type="text" class="form-control" id="Descipcion" placeholder="Duración" required>
+                        <input type="text" class="form-control" name="duracion" placeholder="Duración" required>
                     </div>
                     
                     <div class="form-group col-md-4">
                         <label for="inputState">Contratistas</label>
-                        <select id="inputState" class="form-control" >
+                        <select name="contratista" class="form-control" >
                             <option selected>Escoje contratistas</option>
                             <option>Santiago Valencia</option>
                             <option>Angie Carolina</option>
