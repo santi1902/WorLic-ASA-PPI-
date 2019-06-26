@@ -86,55 +86,71 @@
                                     <div class="container">
                                         
                                         <br>
-                                        <form>
+                                        <form method="post" action="../metodos_funciones/new_contrato.php">
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Nombre</label>
-                                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre " required>
+                                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Codigo</label>
-                                                    <input type="text" class="form-control" id="codigo" placeholder="Codigo" required>
+                                                    <label for="inputEmail4">Fecha</label>
+                                                    <input type="date" class="form-control" name="fecha" placeholder="Fecha del contrato" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Representante Legal</label>
-                                                    <input type="text" class="form-control" id="representante" placeholder="representante legal " required>
+                                                    <input type="text" class="form-control" name="representante" placeholder="Representante legal" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="inputState" aria-required="">Obra</label>
-                                                    <select id="inputState" class="form-control">
-                                                        <option selected>Escoje la obra</option>
-                                                        <option>Prebel</option>
-                                                        <option>Arconsa</option>
+                                                    <label for="inputEmail4">Valor del contrato</label>
+                                                    <input type="number" class="form-control" name="valor" placeholder="Representante legal" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputState">Obra</label>
+                                                    <select name="obra" class="form-control">
+                                                    <option value="0">Selecciona obra</option>
+                                                        <?php 
+                                                        include '../includes/conexion2.php';
+
+                                                        $obra = "SELECT * from obra";
+                                                        $resultado = mysqli_query($conexion,$obra) or die(mysqli_error($conexion));
+                                                        ?>
+
+                                                        <?php foreach ($resultado as $opciones):?>                                                 
+                                                           
+                                                        
+                                                        <option value="<?php echo $opciones['nombre'] ?>"><?php echo $opciones['nombre'] ?></option>
+
+                                                        <?php endforeach ;
+                                                       $close = mysqli_close($conexion);
+                                                        ?>
+
                                                     </select>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputState">Contratistas</label>
-                                                    <select id="inputState" class="form-control">
-                                                        <option selected>Escoje el contratista</option>
-                                                        <option>Santiago Valencia</option>
-                                                        <option>Angie Carolina</option>
-                                                        <option>Alejandra</option>
+                                                    <select name="contratista" class="form-control">
+                                                    <option value="0">Selecciona Contratista</option>
+                                                        <?php 
+                                                        include '../includes/conexion2.php';
+
+                                                        $contratista = "SELECT * from contratista";
+                                                        $resultado = mysqli_query($conexion,$contratista) or die(mysqli_error($conexion));
+                                                        ?>
+
+                                                        <?php foreach ($resultado as $opciones):?>                                                 
+                                                           
+                                                        
+                                                        <option value="<?php echo $opciones['primer_nombre,segundo_nombre'] ?>"><?php echo $opciones['primer_nombre'] ?></option>
+
+                                                        <?php endforeach ;
+                                                       $close = mysqli_close($conexion);
+                                                        ?>
 
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputEmail4">Valor del Contrato</label>
-                                                    <input type="number" class="form-control" id="valor" placeholder="valor del contrato" required>
-                                                </div>
+                                                
 
-                                            </div>
-
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputCity">Fecha de Inicio</label>
-                                                    <input type="date" class="form-control" id="inputCity" required>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputZip">Fecha de Terminado</label>
-                                                    <input type="date" class="form-control" id="inputZip" required>
-                                                </div>
-                                            </div>
+                                            </div>                                      
 
                                             <button type="submit" class="btn btn-primary">Crear</button>
                                         </form>

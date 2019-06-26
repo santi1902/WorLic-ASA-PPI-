@@ -73,64 +73,82 @@
                         <div class="col-md-12">
                             <div class="card card-header-danger">
                                 <div class="card-header card-header-danger ">
-                                    
-                                <h2 class="card-title text-center"> <strong>Nueva Obra</strong></h2>
+
+                                    <h2 class="card-title text-center"> <strong>Nueva Obra</strong></h2>
                                 </div>
                                 <div class="card-body">
-                                <div class="container">
-            
-            <br>
-            <form action="../metodos_funciones/new_obra.php" method="post">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre " required>
-                    </div>
+                                    <div class="container">
 
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Inversion Definida</label>
-                        <input type="number" class="form-control" name="inversion" placeholder="Inversion Definida" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Comportamiento</label>
-                        <input type="text" class="form-control" name="comportamiento" placeholder="Comportamiento" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Descripción </label>
-                        <input type="text" class="form-control" name="descripcion" placeholder="descipcion" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Fecha inicio </label>
-                        <input type="date" class="form-control" name="inicio" placeholder="Fecha de inicio de la obra" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Fecha final esperada </label>
-                        <input type="date" class="form-control" name="fecha_esperada" placeholder="Fecha esperada de finalización" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Fecha Terminado </label>
-                        <input type="date" class="form-control" name="terminada" placeholder="Fecha de terminación de la obra" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Duración </label>
-                        <input type="text" class="form-control" name="duracion" placeholder="Duración" required>
-                    </div>
-                    
-                    <div class="form-group col-md-4">
-                        <label for="inputState">Contratistas</label>
-                        <select name="contratista" class="form-control" >
-                            <option selected>Escoje contratistas</option>
-                            <option>Santiago Valencia</option>
-                            <option>Angie Carolina</option>
-                            <option>Alejandra</option>
+                                        <br>
+                                        <form action="../metodos_funciones/new_obra.php" method="post">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Nombre</label>
+                                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre " required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Inversion Definida</label>
+                                                    <input type="number" class="form-control" name="inversion" placeholder="Inversion Definida" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Comportamiento</label>
+                                                    <input type="text" class="form-control" name="comportamiento" placeholder="Comportamiento" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Descripción </label>
+                                                    <input type="text" class="form-control" name="descripcion" placeholder="Descripcion" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Caracteristicas </label>
+                                                    <input type="text" class="form-control" name="caracteristicas" placeholder="Caracteristicas" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Ubicación </label>
+                                                    <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Fecha inicio </label>
+                                                    <input type="date" class="form-control" name="inicio" placeholder="Fecha de inicio de la obra" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Fecha final esperada </label>
+                                                    <input type="date" class="form-control" name="fecha_esperada" placeholder="Fecha esperada de finalización" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Fecha Terminado </label>
+                                                    <input type="date" class="form-control" name="terminada" placeholder="Fecha de terminación de la obra" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Duración de la obra </label>
+                                                    <input type="number" class="form-control" name="duracion" placeholder="Escribe la duración" required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="inputState">Contratistas</label>
+                                                    <select name="contratista" class="form-control">
+                                                    <option value="0">Selecciona Contratista</option>
+                                                        <?php 
+                                                        include '../includes/conexion2.php';
 
-                        </select>
-                    </div>
-                </div>
-        
-                <button type="submit" class="btn btn-primary">Crear</button>
-            </form>
-        </div>
+                                                        $contratista = "SELECT * from contratista";
+                                                        $resultado = mysqli_query($conexion,$contratista) or die(mysqli_error($conexion));
+                                                        ?>
+
+                                                        <?php foreach ($resultado as $opciones):?>                                                 
+                                                           
+                                                        
+                                                        <option value="<?php echo $opciones['primer_nombre,segundo_nombre'] ?>"><?php echo $opciones['primer_nombre'] ?></option>
+
+                                                        <?php endforeach ;
+                                                       $close = mysqli_close($conexion);
+                                                        ?>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary">Crear</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +157,7 @@
             </div>
 
         </div>
-        
+
         </div>
 
 

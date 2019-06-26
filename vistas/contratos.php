@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+<?php
+    include '../includes/conexion2.php';
+?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -99,21 +102,27 @@
                                                 <th>Representante Legal</th>
                                                 <th>Obra</th>
                                             </tr>
-                                            <tr>
-                                                <td>Arconsa</td>
-                                                <td>38483-CDS</td>
-                                                <td>Argelio Ramirez</td>
-                                                <td>Politecnico Jaime isaza</td>
-                                                <td><a href="./infocontratos.php"><button class="btn btn-info">Ver</button></a></td>
+                                            
+                                            <?php
 
-                                            </tr>
+                                            $contrato = mysqli_query($conexion, "SELECT nombre_contrato, fecha_contrato,representante_legal,valor_contrato FROM contrato");
+                                            $result = mysqli_num_rows($contrato);
+
+                                            if($result > 0){
+                                            while ($data = mysqli_fetch_array($contrato)) {                                           
+                                            ?>
                                             <tr>
-                                                <td>Prebel</td>
-                                                <td>VD-3454-DE</td>
-                                                <td>Santiago valencia</td>
-                                                <td>Arus S.A</td>
+                                                <td><?php echo $data['nombre_contrato'] ?></td>
+                                                <td><?php echo $data['fecha_contrato']?></td>
+                                                <td><?php echo $data['representante_legal']?></td>
+                                                <td><?php echo $data['valor_contrato']?></td>
                                                 <td><a href="./infocontratos.php"><button class="btn btn-info">Ver</button></a></td>
                                             </tr>
+                                            <?php          
+                                        }
+                                    }
+                                    ?>
+                                            
                                         </table>
                                     </div>
                                 </div>

@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+<?php
+    include '../includes/conexion2.php';
+    include '../includes/db.php';
+?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -95,28 +99,29 @@
                                         <table class="table table-hover">
                                             <tr>
                                                 <th>Nombre</th>
-                                                <th>Apellidos</th>
+                                                <th>Apellido</th>
                                                 <th>Cedula</th>
-                                                <th>Estado</th>
+                                                <th>telefono</th>
+                                                <th>Email</th>
                                             </tr>
+                                            <?php
+                                            $contratistas = mysqli_query($conexion, "SELECT primer_nombre,primer_apellido,identificacion,telefono,email FROM contratista");
+                                            $result = mysqli_num_rows($contratistas);
+
+                                            if($result > 0){
+                                            while ($data = mysqli_fetch_array($contratistas)) {                                           
+                                            ?>
                                             <tr>
-                                                <td>Santiago</td>
-                                                <td>Valencia Guzmán</td>
-                                                <td>1000395174</td>
-                                                <td>Disponible</td>
+                                                <td><?php echo $data['primer_nombre'] ?></td>
+                                                <td><?php echo $data['primer_apellido']?></td>
+                                                <td><?php echo $data['identificacion']?></td>
+                                                <td><?php echo $data['telefono']?></td>
+                                                <td><?php echo $data['email']?></td>
                                             </tr>
-                                            <tr>
-                                                <td>Angie Carolina</td>
-                                                <td>Orlas Madrid</td>
-                                                <td>1007239625</td>
-                                                <td>Ocupado</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Alejandra</td>
-                                                <td>Montoya</td>
-                                                <td>23942034</td>
-                                                <td>Ocupado</td>
-                                            </tr>
+                                            <?php          
+                                        }
+                                    }
+                                    ?>                                  
                                         </table>
                                     </div>
                                 </div>

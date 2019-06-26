@@ -4,34 +4,34 @@ include '../includes/db.php';
 
 $db = new DB();
 
-$nombre = $POST['nombre'];
-$inversion = $POST['inversion'];
-$comportamiento = $POST['comportamiento'];
-$descripcion = $POST['descripcion'];
-$inicio = $POST['inicio'];
-$fecha_esperada = $POST['fecha_esperada'];
-$terminada = $POST['terminada'];
-$duracion = $POST['duracion'];
-$contratista = $POST['contratista'];
+$nombre = $_POST['nombre'];
+$inversion = $_POST['inversion'];
+$comportamiento = $_POST['comportamiento'];
+$descripcion = $_POST['descripcion'];
+$ubicacion  = $_POST['ubicacion'];
+$inicio = $_POST['inicio'];
+$fecha_esperada = $_POST['fecha_esperada'];
+$terminada = $_POST['terminada'];
+$duracion = $_POST['duracion'];
+$contratista = $_POST['contratista'];
+$caracteristicas = $_POST['caracteristicas'];
 
-$sql =  "INSERT INTO usuario(nombre,segundo_nombre,primer_apellido,segundo_apellido,
-            identificacion,direccion,telefono,username,password,perfil,fk_tipo_documento,fk_parametrizacion
-            ) VALUES ('$nombre','$segundo_nombre','$apellido','$segundo_apellido','$cedula',
-            '$direccion','$celular','$email','$password','1','1','1')";
+$sql =  "INSERT INTO obra(inversion_definida,comportamiento,
+descripcion_obra,caracteristicas,ubicacion,fecha_inicio,fecha_final_esperada,fecha_final,
+duracion,fk_obra,fk_contratista,fk_tipo_obra,nombre
+            ) VALUES ('$inversion','$comportamiento','$descripcion','$caracteristicas',
+            '$ubicacion','$inicio','$fecha_esperada','$terminada','$duracion','1','$contratista','1','$nombre')";
 
 
 
-$verificar_usuario  = "SELECT * FROM usuario WHERE username = '$email'";
 
 $conexion = $db->connect();
-
-
-
 try {
+
     $conexion->query($sql);
     echo '
     <script>
-    alert("El operario se Registro Correctamente")
+    alert("Obra Registrada Correctamente Correctamente")
     window.history.go(-1);
     </script>
     ';

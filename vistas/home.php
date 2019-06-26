@@ -1,7 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<?php
+    include './includes/conexion2.php';
+?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -102,29 +106,33 @@
                                         <table class="table table-hover">
                                             <tr>
                                                 <th>Nombre</th>
-                                                <th>Codigo</th>
-                                                <th>Contratista</th>
-                                                <th>Estado</th>
-                                                <th>Tiempo</th>
-                                                <th>Info</th>
+                                                <th>Inversion</th>
+                                                <th>Ubicación</th>
+                                                <th>Fecha de inicio</th>
+                                                <th>Fecha final esperada</th>
+                                                <th>Fecha final</th>
                                             </tr>
-                                            <tr>
-                                                <td>Arconsa</td>
-                                                <td>38483-CDS</td>
-                                                <td>Argelio Ramirez</td>
-                                                <td>Abierto</td>
-                                                <td>2 meses</td>
-                                                <td><a href="./vistas/info.php"><button class="btn btn-info">Ver</button></a></td>
+                                            <?php
 
-                                            </tr>
+                                            $obra = mysqli_query($conexion, "SELECT nombre, inversion_definida,ubicacion,fecha_inicio,fecha_final_esperada,fecha_final FROM obra");
+                                            $result = mysqli_num_rows($obra);
+
+                                            if($result > 0){
+                                            while ($data = mysqli_fetch_array($obra)) {                                           
+                                            ?>
                                             <tr>
-                                                <td>Prebel</td>
-                                                <td>VD-3454-DE</td>
-                                                <td>Santiago</td>
-                                                <td>Cerrado</td>
-                                                <td>3 meses</td>
+                                                <td><?php echo $data['nombre'] ?></td>
+                                                <td><?php echo $data['inversion_definida']?></td>
+                                                <td><?php echo $data['ubicacion']?></td>
+                                                <td><?php echo $data['fecha_inicio']?></td>
+                                                <td><?php echo $data['fecha_final_esperada']?></td>
+                                                <td><?php echo $data['fecha_final']?></td>
                                                 <td><a href="./vistas/info.php"><button class="btn btn-info">Ver</button></a></td>
                                             </tr>
+                                            <?php          
+                                        }
+                                    }
+                                    ?>
                                         </table>
                                     </div>
                                 </div>
