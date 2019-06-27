@@ -82,7 +82,7 @@
                                     <div class="container">
                                         
                                         <br>
-                                        <form method="post" action="../metodos_funciones/new_contratista_alpelo.php">
+                                        <form method="post" action="../metodos_funciones/new_contratista.php">
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Primer Nombre</label>
