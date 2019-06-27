@@ -107,7 +107,6 @@
                                                 <div class="form-group col-md-6">
                                                     <label for="inputState">Obra</label>
                                                     <select name="obra" class="form-control">
-                                                    <option value="0">Selecciona obra</option>
                                                         <?php 
                                                         include '../includes/conexion2.php';
 
@@ -118,7 +117,7 @@
                                                         <?php foreach ($resultado as $opciones):?>                                                 
                                                            
                                                         
-                                                        <option value="<?php echo $opciones['nombre'] ?>"><?php echo $opciones['nombre'] ?></option>
+                                                        <option value="<?php echo $opciones['id_obra'] ?>"><?php echo $opciones['nombre'] ?></option>
 
                                                         <?php endforeach ;
                                                        $close = mysqli_close($conexion);
@@ -129,7 +128,6 @@
                                                 <div class="form-group col-md-6">
                                                     <label for="inputState">Contratistas</label>
                                                     <select name="contratista" class="form-control">
-                                                    <option value="0">Selecciona Contratista</option>
                                                         <?php 
                                                         include '../includes/conexion2.php';
 
@@ -140,7 +138,7 @@
                                                         <?php foreach ($resultado as $opciones):?>                                                 
                                                            
                                                         
-                                                        <option value="<?php echo $opciones['primer_nombre,segundo_nombre'] ?>"><?php echo $opciones['primer_nombre'] ?></option>
+                                                        <option value="<?php echo $opciones['id_contratista'] ?>"><?php echo $opciones['primer_nombre'] ?></option>
 
                                                         <?php endforeach ;
                                                        $close = mysqli_close($conexion);

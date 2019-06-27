@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+    
+<?php
+    include '../includes/conexion2.php';
+    include '../includes/db.php';
+?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -106,31 +111,32 @@
                                         <table class="table table-hover">
                                             <tr>
                                                 <th>Nombre</th>
-                                                <th>Apellidos</th>
+                                                <th>Apellido</th>
                                                 <th>Cedula</th>
+                                                <th>Celular</th>
                                                 <th>Email</th>
-                                            </tr>
+                                                <th class="text-center">Sistema</th>
+                                            </tr>                                            
+                                            <?php
+                                            $operarios = mysqli_query($conexion, "SELECT nombre,primer_apellido,identificacion,telefono,username FROM usuario");
+                                            $result = mysqli_num_rows($operarios);
+
+                                            if($result > 0){
+                                            while ($data = mysqli_fetch_array($operarios)) {                                           
+                                            ?>
                                             <tr>
-                                                <td>Santiago</td>
-                                                <td>Valencia Guzmán</td>
-                                                <td>1000395174</td>
-                                                <td>santiago.valencia@arus.com.co</td>
-                                                <td><button class="btn btn-outline-primary"><span class="icon-edit"></span>Actualizar</button></td>
+                                                <td><?php echo $data['nombre'] ?></td>
+                                                <td><?php echo $data['primer_apellido']?></td>
+                                                <td><?php echo $data['identificacion']?></td>
+                                                <td><?php echo $data['telefono']?></td>
+                                                <td><?php echo $data['username']?></td>
+                                                <td class="text-center"><a href="actualizar_user.php"><button class="btn btn-outline-primary"><span class="icon-edit"></span>Eliminar</button></a>
+                                                <a href="actualizar_user.php"><button class="btn btn-outline-primary"><span class="icon-edit"></span>Actualizar</button></a></td>
                                             </tr>
-                                            <tr>
-                                                <td>Angie Carolina</td>
-                                                <td>Orlas Madrid</td>
-                                                <td>1007239625</td>
-                                                <td>angie.carolina@softcaribbean</td>
-                                                <td><button class="btn btn-outline-primary"><span class="icon-edit"></span> Actualizar</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Alejandra</td>
-                                                <td>Montoya</td>
-                                                <td>23942034</td>
-                                                <td>alejandra.montoya@echez.com.co</td>
-                                                <td><button class="btn btn-outline-primary"><span class="icon-edit"></span>Actualizar</button></td>
-                                            </tr>
+                                            <?php          
+                                        }
+                                    }
+                                    ?>
                                         </table>
                                     </div>
                                 </div>

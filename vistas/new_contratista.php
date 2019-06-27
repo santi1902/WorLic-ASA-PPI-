@@ -82,31 +82,31 @@
                                     <div class="container">
                                         
                                         <br>
-                                        <form method="post" action="../metodos_funciones/new_contratista.php">
+                                        <form method="post" action="../metodos_funciones/new_contratista_alpelo.php">
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Primer Nombre</label>
-                                                    <input type="text" class="form-control" name="nombre" placeholder="Ingresa primer nombre " required>
+                                                    <input type="text" class="form-control"  name="nombre" placeholder="Ingresa primer nombre " required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Segundo Nombre</label>
-                                                    <input type="text" class="form-control" name="segundo_nombre" placeholder="Ingresa segundo nombre" >
+                                                    <input type="text" class="form-control"  name="segundo_nombre" placeholder="Ingresa segundo nombre" >
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Primer Apellido</label>
-                                                    <input type="text" class="form-control" name="apellido" placeholder="Ingresa primer apellido" required>
+                                                    <input type="text" class="form-control"  name="apellido" placeholder="Ingresa primer apellido" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Segundo Apellido</label>
-                                                    <input type="text" class="form-control" name="segundo_apellido" placeholder="Ingresa segundo apellido" >
+                                                    <input type="text" class="form-control"  name="segundo_apellido" placeholder="Ingresa segundo apellido" >
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Cedula</label>
-                                                    <input type="number" class="form-control" name="cedula" placeholder="Ingresa la cedula" required>
+                                                    <input type="number" class="form-control"  name="cedula" placeholder="Ingresa la cedula" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Celular</label>
-                                                    <input type="tel" class="form-control" name="celular" placeholder="Ingresa tu numero de celular" required>
+                                                    <input type="tel" class="form-control"  name="celular" placeholder="Ingresa tu numero de celular" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">Email</label>
@@ -116,7 +116,7 @@
                                             </div>
 
 
-                                            <button type="submit" class="btn btn-primary">Crear</button>
+                                            <input type="submit" class="btn btn-primary"  Placeholder="Crear" >
                                         </form>
                                     </div>
                                 </div>
